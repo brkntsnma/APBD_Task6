@@ -13,6 +13,8 @@ public class AppointmentListDto
 public class AppointmentDetailsDto
 {
     public int IdAppointment { get; set; }
+    public int IdPatient { get; set; }
+    public int IdDoctor { get; set; }
     public DateTime AppointmentDate { get; set; }
     public string Status { get; set; } = string.Empty;
     public string Reason { get; set; } = string.Empty;
@@ -46,5 +48,6 @@ public class UpdateAppointmentRequestDto
 
 public class ErrorResponseDto
 {
-    public string Message { get; set; } = string.Empty;
+    public string Message { get; set; }
+    public ErrorResponseDto(string message) => Message = message;
 }
